@@ -1,0 +1,9 @@
+Package: com.randy420.evanescocc
+Name: evanescocc
+Depends: com.opa334.ccsupport, com.cpdigitaldarkroom.itsevanesco
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Control Center Modules for Evanesco
+Maintainer: Randy420
+Author: Randy420
+Section: Control Center (Modules)
