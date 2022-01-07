@@ -1,6 +1,6 @@
 #import "evanescocc.h"
 
-#define SETTINGS_CHANGED "com.cpdigitaldarkroom.itsevanesco.settings"
+#define SETTINGS_CHANGED CFSTR("com.cpdigitaldarkroom.itsevanesco.settings")
 #define PREFS CFSTR("com.cpdigitaldarkroom.itsevanesco")
 #define PLIST @"/var/mobile/Library/Preferences/com.cpdigitaldarkroom.itsevanesco.plist"
 #define MYCC @"enabled"
@@ -31,6 +31,6 @@ static BOOL GetBool(NSString *key, BOOL defaultValue) {
 	[Dict writeToFile:PLIST atomically:YES];
 	CFPreferencesSetAppValue((CFStringRef)MYCC, (CFPropertyListRef)@(selected), PREFS);
 	CFPreferencesAppSynchronize(PREFS);
-	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), CFSTR(SETTINGS_CHANGED), NULL, NULL, TRUE);
+	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), SETTINGS_CHANGED, NULL, NULL, TRUE);
 }
 @end
